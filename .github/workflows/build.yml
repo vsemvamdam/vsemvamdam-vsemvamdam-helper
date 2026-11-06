@@ -30,7 +30,7 @@ jobs:
         run: npm run build
       - uses: actions/upload-artifact@v4
         with:
-          name: vsemvamdam-helper
+          name: vsemvamdam-Steam-Helper
           path: dist/*.zip
       - name: Релиз
         if: startsWith(github.ref, 'refs/tags/v')

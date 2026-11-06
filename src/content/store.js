@@ -1,5 +1,5 @@
 /*
- * vsemvamdam-helper — магазин Steam: цены игры в разных регионах
+ * vsemvamdam-Steam-Helper — магазин Steam: цены игры в разных регионах
  * с пересчётом в одну валюту и быстрые ссылки на SteamDB / IsThereAnyDeal.
  */
 (function () {

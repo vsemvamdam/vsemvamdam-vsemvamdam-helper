@@ -1,5 +1,5 @@
 /*
- * vsemvamdam-helper — общее ядро для всех страниц Steam (изолированный мир).
+ * vsemvamdam-Steam-Helper — общее ядро для всех страниц Steam (изолированный мир).
  */
 (function () {
   'use strict';
@@ -320,7 +320,7 @@
   };
   VH.esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
   VH.sleep = (ms) => new Promise((r) => setTimeout(r, ms));
-  VH.warn = (...a) => console.warn('[vsemvamdam-helper]', ...a);
+  VH.warn = (...a) => console.warn('[vsemvamdam-Steam-Helper]', ...a);
   VH.fmtFloat = (f, digits) => (f == null ? '—' : Number(f).toFixed(digits || 8).replace(/0+$/, '').replace(/\.$/, '.0'));
   VH.copy = async (text) => {
     try { await navigator.clipboard.writeText(text); VH.toast('Скопировано'); } catch (e) { VH.toast('Не удалось скопировать', 'bad'); }

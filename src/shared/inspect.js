@@ -1,5 +1,5 @@
 /*
- * vsemvamdam-helper — декодер inspect-ссылок CS2.
+ * vsemvamdam-Steam-Helper — декодер inspect-ссылок CS2.
  *
  * С марта 2026 года inspect-ссылки CS2 содержат данные предмета прямо в себе:
  * hex-полезная нагрузка = protobuf CEconItemPreviewDataBlock.

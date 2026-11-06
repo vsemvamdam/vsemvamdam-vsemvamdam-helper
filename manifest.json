@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "vsemvamdam helper",
+  "name": "vsemvamdam-Steam-Helper",
   "short_name": "vh",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Цены с разных площадок, float и наклейки, массовая продажа, трейды и маркет Steam — в одном расширении.",
   "minimum_chrome_version": "111",
   "default_locale": "ru",
@@ -13,7 +13,7 @@
     "128": "icons/icon128.png"
   },
   "action": {
-    "default_title": "vsemvamdam helper",
+    "default_title": "vsemvamdam-Steam-Helper",
     "default_popup": "src/popup/popup.html",
     "default_icon": {
       "16": "icons/icon16.png",

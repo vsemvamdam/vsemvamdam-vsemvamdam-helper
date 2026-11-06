@@ -1,5 +1,5 @@
 /*
- * vsemvamdam-helper — мост в «мир страницы» (world: MAIN).
+ * vsemvamdam-Steam-Helper — мост в «мир страницы» (world: MAIN).
  * Читает глобальные объекты Steam (g_steamID, g_rgListingInfo, rgItem у предметов…)
  * и передаёт их изолированным скриптам расширения через postMessage.
  * Ничего не отправляет наружу и не меняет поведение Steam.

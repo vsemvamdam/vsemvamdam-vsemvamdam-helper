@@ -1,6 +1,6 @@
 {
-  "name": "vsemvamdam-helper",
-  "version": "0.1.0",
+  "name": "vsemvamdam-steam-helper",
+  "version": "0.1.1",
   "private": true,
   "description": "Расширение для Steam: цены с площадок, float и наклейки, массовая продажа, маркет и трейды.",
   "scripts": {

@@ -122,7 +122,7 @@ async function step(name, fn) {
   }
   const shot = (page, name) => page.screenshot({ path: path.join(SHOTS, name + '.png'), fullPage: true });
 
-  console.log('Сквозной тест vsemvamdam-helper');
+  console.log('Сквозной тест vsemvamdam-Steam-Helper');
 
   /* ================= инвентарь ================= */
   const inv = await open(`https://steamcommunity.com/profiles/${fx.ME}/inventory/#730_2`, 'inventory');

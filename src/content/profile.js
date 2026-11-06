@@ -1,5 +1,5 @@
 /*
- * vsemvamdam-helper — профиль Steam: идентификаторы, полезные ссылки,
+ * vsemvamdam-Steam-Helper — профиль Steam: идентификаторы, полезные ссылки,
  * стоимость CS2-инвентаря владельца профиля.
  */
 (function () {
@@ -52,7 +52,7 @@
       ['Инвентарь', `https://steamcommunity.com/profiles/${id}/inventory/#730`]
     ];
     const box = h('div', { class: 'vh-profile-box' },
-      h('div', { style: { display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' } }, h('span', { class: 'vh-logo' }, 'vh'), h('b', {}, 'vsemvamdam helper')),
+      h('div', { style: { display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' } }, h('span', { class: 'vh-logo' }, 'vh'), h('b', {}, 'vsemvamdam-Steam-Helper')),
       h('div', { class: 'vh-kv' },
         h('span', {}, 'SteamID64'), h('span', { class: 'vh-mono', style: { cursor: 'pointer' }, title: 'Скопировать', onclick: () => VH.copy(id) }, id),
         h('span', {}, 'SteamID3'), h('span', { class: 'vh-mono', style: { cursor: 'pointer' }, onclick: () => VH.copy(steamId3(id)) }, steamId3(id))),

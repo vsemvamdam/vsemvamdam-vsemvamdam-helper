@@ -1,5 +1,5 @@
 /*
- * vsemvamdam-helper — фоновый сервис-воркер.
+ * vsemvamdam-Steam-Helper — фоновый сервис-воркер.
  */
 importScripts(
   '../shared/currency.js',

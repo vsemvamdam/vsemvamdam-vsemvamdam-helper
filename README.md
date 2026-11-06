@@ -1,10 +1,10 @@
-# vsemvamdam helper
+# vsemvamdam-Steam-Helper
 
 Расширение для Steam: цены с разных площадок прямо в инвентаре, float и наклейки, массовая продажа, улучшенный маркет и трейды. Работает в Chrome, Edge, Яндекс Браузере, Opera и других браузерах на Chromium (версия 111+).
 
 ## Установка
 
-1. Скачайте `vsemvamdam-helper-<версия>.zip` из [Releases](../../releases) или из артефактов последней сборки во вкладке **Actions**.
+1. Скачайте `vsemvamdam-Steam-Helper-<версия>.zip` из [Releases](../../releases) или из артефактов последней сборки во вкладке **Actions**.
 2. Распакуйте архив в постоянную папку (её нельзя удалять — браузер грузит расширение оттуда).
 3. Откройте `chrome://extensions` (в Яндексе — `browser://extensions`), включите **Режим разработчика**.
 4. Нажмите **Загрузить распакованное** и выберите папку с `manifest.json`.
@@ -72,7 +72,7 @@
 npm test          # юнит-тесты: декодер inspect, комиссии, валюты
 npm run e2e       # сквозной тест: расширение в Chrome + страницы-фикстуры Steam
 npm run data      # обновить справочники наклеек/брелоков/скинов
-npm run build     # собрать dist/vsemvamdam-helper-<версия>.zip
+npm run build     # собрать dist/vsemvamdam-Steam-Helper-<версия>.zip
 ```
 
 Структура: `src/background` — фоновый воркер (цены, очередь Steam, трейды), `src/content` — скрипты страниц Steam (`bridge.js` читает данные страницы, `core.js` — общее ядро, остальные — по разделам), `src/shared` — общий код (декодер inspect, комиссии, валюты, настройки), `src/popup`, `src/options` — интерфейс.

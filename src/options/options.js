@@ -144,7 +144,7 @@ const SECTIONS = [
         status.textContent = `Кэш очищен (${keys.length} записей)`;
       } }, 'Очистить кэш цен'),
       el('button', { class: 'btn', onclick: () => {
-        const a = el('a', { href: URL.createObjectURL(new Blob([JSON.stringify(cfg, null, 2)], { type: 'application/json' })), download: 'vsemvamdam-helper-settings.json' });
+        const a = el('a', { href: URL.createObjectURL(new Blob([JSON.stringify(cfg, null, 2)], { type: 'application/json' })), download: 'vsemvamdam-Steam-Helper-settings.json' });
         a.click();
       } }, 'Экспорт настроек'),
       el('button', { class: 'btn', onclick: () => {
