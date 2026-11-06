@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>vsemvamdam helper</title>
+  <link rel="stylesheet" href="../ui/ui.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><span class="logo">v</span><div><b>vsemvamdam helper</b><br><small id="ver"></small></div></div>
+    <button class="btn ghost" id="openOptions" title="Настройки">Настройки</button>
+  </header>
+
+  <section class="search">
+    <input type="text" id="q" placeholder="Проверить цену: AK-47 Redline, Kilowatt Case…" autocomplete="off">
+    <div id="results"></div>
+  </section>
+
+  <section class="trades card" id="trades">
+    <div class="row"><span class="label">Трейд-офферы</span><button class="btn ghost" id="refresh" title="Проверить сейчас">⟳</button></div>
+    <div id="tradeBody" class="muted">Проверяю…</div>
+  </section>
+
+  <nav class="links">
+    <a class="btn" target="_blank" href="https://steamcommunity.com/my/inventory/#730">Инвентарь</a>
+    <a class="btn" target="_blank" href="https://steamcommunity.com/market/">Маркет</a>
+    <a class="btn" target="_blank" href="https://steamcommunity.com/my/tradeoffers/">Офферы</a>
+    <a class="btn" target="_blank" href="https://steamcommunity.com/market/#myhistory">История</a>
+  </nav>
+
+  <footer class="muted" id="foot"></footer>
+
+  <script src="../shared/currency.js"></script>
+  <script src="../shared/settings.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

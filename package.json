@@ -1,0 +1,15 @@
+{
+  "name": "vsemvamdam-helper",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Расширение для Steam: цены с площадок, float и наклейки, массовая продажа, маркет и трейды.",
+  "scripts": {
+    "test": "node --test tests/*.test.js",
+    "e2e": "node tests/e2e/run.js",
+    "data": "node scripts/update-data.js",
+    "build": "node scripts/build.js"
+  },
+  "devDependencies": {
+    "playwright": "^1.50.0"
+  }
+}

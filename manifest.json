@@ -1,0 +1,88 @@
+{
+  "manifest_version": 3,
+  "name": "vsemvamdam helper",
+  "short_name": "vh",
+  "version": "0.1.0",
+  "description": "Цены с разных площадок, float и наклейки, массовая продажа, трейды и маркет Steam — в одном расширении.",
+  "minimum_chrome_version": "111",
+  "default_locale": "ru",
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "vsemvamdam helper",
+    "default_popup": "src/popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png"
+    }
+  },
+  "options_ui": {
+    "page": "src/options/options.html",
+    "open_in_tab": true
+  },
+  "background": {
+    "service_worker": "src/background/sw.js"
+  },
+  "permissions": ["storage", "unlimitedStorage", "alarms", "notifications"],
+  "host_permissions": [
+    "https://steamcommunity.com/*",
+    "https://store.steampowered.com/*",
+    "https://api.steampowered.com/*",
+    "https://api.skinport.com/*",
+    "https://market.csgo.com/*",
+    "https://lis-skins.com/*",
+    "https://api.waxpeer.com/*",
+    "https://api.dmarket.com/*",
+    "https://csfloat.com/*",
+    "https://open.er-api.com/*",
+    "https://cdn.jsdelivr.net/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://steamcommunity.com/*", "https://store.steampowered.com/app/*"],
+      "js": ["src/content/bridge.js"],
+      "world": "MAIN",
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://steamcommunity.com/*"],
+      "js": [
+        "src/shared/currency.js",
+        "src/shared/fees.js",
+        "src/shared/settings.js",
+        "src/shared/inspect.js",
+        "src/content/core.js",
+        "src/content/sell.js",
+        "src/content/inventory.js",
+        "src/content/market.js",
+        "src/content/trade.js",
+        "src/content/profile.js"
+      ],
+      "css": ["src/content/content.css"],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://store.steampowered.com/app/*"],
+      "js": [
+        "src/shared/currency.js",
+        "src/shared/fees.js",
+        "src/shared/settings.js",
+        "src/shared/inspect.js",
+        "src/content/core.js",
+        "src/content/store.js"
+      ],
+      "css": ["src/content/content.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["src/data/*.json"],
+      "matches": ["https://steamcommunity.com/*", "https://store.steampowered.com/*"]
+    }
+  ]
+}

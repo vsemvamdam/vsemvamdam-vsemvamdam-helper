@@ -1,0 +1,27 @@
+.wrap { display: grid; grid-template-columns: 240px minmax(0, 760px); gap: 48px; max-width: 1100px; margin: 0 auto; padding: 48px 32px 80px; }
+aside { position: sticky; top: 48px; align-self: start; display: flex; flex-direction: column; gap: 28px; }
+nav { display: flex; flex-direction: column; gap: 2px; }
+nav a { text-decoration: none; padding: 7px 10px; border-radius: 8px; color: var(--mute); }
+nav a:hover { color: var(--text); background: var(--panel); }
+nav a.on { color: var(--text); background: var(--panel); box-shadow: 0 0 0 1px var(--line); }
+.saved { font-size: 12px; min-height: 16px; }
+main { display: flex; flex-direction: column; gap: 40px; }
+h1 { font: 650 28px/1.15 var(--font); letter-spacing: -.02em; margin: 0 0 6px; }
+.lead { color: var(--mute); margin: 0; max-width: 560px; }
+section h2 { font: 650 17px/1.2 var(--font); letter-spacing: -.01em; margin: 0 0 4px; }
+section > p { color: var(--mute); margin: 0 0 14px; }
+.list { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; }
+.item { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding: 14px 18px; border-top: 1px solid var(--line); }
+.item:first-child { border-top: 0; }
+.item .t { display: flex; flex-direction: column; gap: 2px; }
+.item .t small { color: var(--mute); }
+.item .c { flex: none; width: 260px; display: flex; justify-content: flex-end; }
+.item .c.narrow { width: auto; }
+.providers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; padding: 14px 18px; }
+.prov { display: flex; align-items: center; gap: 8px; padding: 8px 10px; border: 1px solid var(--line); border-radius: 8px; cursor: pointer; user-select: none; }
+.prov input { accent-color: var(--accent); }
+.regions { display: grid; grid-template-columns: repeat(5, 1fr); gap: 6px; padding: 14px 18px; }
+.regions label { display: flex; gap: 6px; align-items: center; }
+.actions { display: flex; gap: 8px; flex-wrap: wrap; padding: 14px 18px; }
+.note { font-size: 12px; color: var(--mute); padding: 0 18px 14px; }
+@media (max-width: 820px) { .wrap { grid-template-columns: 1fr; gap: 24px; } aside { position: static; } .item { flex-direction: column; align-items: stretch; } .item .c { width: 100%; } .providers { grid-template-columns: 1fr 1fr; } }

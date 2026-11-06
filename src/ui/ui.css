@@ -1,0 +1,58 @@
+/* vsemvamdam-helper — общий стиль попапа и настроек: светлый минимализм, тёмная тема по системе */
+:root {
+  --bg: #faf9f6;
+  --panel: #ffffff;
+  --line: #e7e4dd;
+  --text: #1b1b1a;
+  --mute: #7b7a75;
+  --accent: #1b1b1a;
+  --gold: #b8955a;
+  --good: #2f7d57;
+  --bad: #b5523f;
+  --radius: 10px;
+  --font: Inter, "Segoe UI Variable", "Segoe UI", system-ui, -apple-system, sans-serif;
+  color-scheme: light;
+}
+:root[data-theme="dark"] {
+  --bg: #121315; --panel: #1a1b1e; --line: #2a2c30; --text: #ecebe7; --mute: #8f8e89; --accent: #ece6da; --gold: #c9a96e;
+  --good: #7cc29b; --bad: #e08a7b; color-scheme: dark;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #121315; --panel: #1a1b1e; --line: #2a2c30; --text: #ecebe7; --mute: #8f8e89; --accent: #ece6da; --gold: #c9a96e;
+    --good: #7cc29b; --bad: #e08a7b; color-scheme: dark;
+  }
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--bg); color: var(--text); font: 400 13px/1.45 var(--font); -webkit-font-smoothing: antialiased; }
+a { color: inherit; }
+.logo { display: inline-grid; place-items: center; width: 26px; height: 26px; border-radius: 7px; background: #141518; color: #ece6da; font: 800 14px/1 var(--font); position: relative; }
+.logo::after { content: ""; position: absolute; right: 4px; bottom: 5px; width: 4px; height: 4px; border-radius: 50%; background: #c9a96e; }
+.brand { display: flex; align-items: center; gap: 10px; }
+.brand b { font-weight: 650; letter-spacing: -.01em; }
+.brand small { color: var(--mute); }
+.muted { color: var(--mute); }
+.good { color: var(--good); }
+.bad { color: var(--bad); }
+.num { font-variant-numeric: tabular-nums; }
+.btn { appearance: none; border: 1px solid var(--line); background: var(--panel); color: var(--text); border-radius: 8px; padding: 7px 12px;
+  font: 500 12.5px/1.2 var(--font); cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 6px; }
+.btn:hover { border-color: #cfcac0; }
+.btn.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.btn.ghost { background: transparent; border-color: transparent; color: var(--mute); }
+.btn.ghost:hover { color: var(--text); }
+input[type=text], input[type=number], input[type=password], select {
+  appearance: none; width: 100%; background: var(--panel); color: var(--text); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; font: 400 13px/1.2 var(--font);
+}
+select { background-image: linear-gradient(45deg, transparent 50%, var(--mute) 50%), linear-gradient(135deg, var(--mute) 50%, transparent 50%);
+  background-position: calc(100% - 13px) 52%, calc(100% - 9px) 52%; background-size: 4px 4px; background-repeat: no-repeat; padding-right: 26px; }
+input:focus, select:focus { outline: none; border-color: var(--gold); }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius); }
+.label { font: 600 10.5px/1 var(--font); text-transform: uppercase; letter-spacing: .09em; color: var(--mute); }
+.switch { position: relative; width: 34px; height: 20px; flex: none; }
+.switch input { opacity: 0; width: 0; height: 0; position: absolute; }
+.switch span { position: absolute; inset: 0; border-radius: 20px; background: var(--line); transition: .2s; cursor: pointer; }
+.switch span::after { content: ""; position: absolute; left: 3px; top: 3px; width: 14px; height: 14px; border-radius: 50%; background: #fff; transition: .2s; box-shadow: 0 1px 2px rgba(0,0,0,.2); }
+.switch input:checked + span { background: var(--accent); }
+.switch input:checked + span::after { transform: translateX(14px); background: var(--bg); }
+.dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; }
